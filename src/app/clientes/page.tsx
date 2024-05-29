@@ -17,7 +17,7 @@ const Customers = async ({
       </div>    
       <div className="overflow-x-auto">
           <div className="mb-2 w-full text-right">
-                     <Link href="/reuniones/create" className="btn btn-primary">
+                     <Link href="/clientes/create" className="btn btn-primary">
                         Crear
                     </Link>
                 </div>
