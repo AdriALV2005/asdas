@@ -30,7 +30,7 @@ const TableDataReuniones= async ({
                         <td className="py-3 px-6">{metting.hora}</td>
                         <td className="py-3 px-6">{metting.fecha}</td>
                         <td className="py-3 px-6">{metting.lugar}</td>
-                        <td className="py-3 px-6">{formatDate(metting.createdAt.toString())}</td>
+                        <td  className="py-3 px-6">{formatDate(metting.createdAt.toString())}</td>
                         
                          <td className="flex justify-center gap-1 py-3">
                             <Link href={`/reunion/edit/${metting.reunion_id}`} className="btn btn-info">
