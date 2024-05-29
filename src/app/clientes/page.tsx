@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Search from "../../../components/search";
-import TableDataReuniones from "../../../components/tabledataReunion";
+import TableDataClientes from "../../../components/tabledataClientes";
 
-const Mettings = async ({
+const Customers = async ({
     searchParams,
 }: {
     searchParams?: {
@@ -13,7 +13,7 @@ const Mettings = async ({
     return (
         <div className="w-screen py-20 flex justify-center flex-col items-center">
       <div className="flex items-center justify-between gap-1 mb-5">
-        <h1 >Reuniones</h1>
+        <h1 >Clientes</h1>
       </div>    
       <div className="overflow-x-auto">
           <div className="mb-2 w-full text-right">
@@ -23,10 +23,10 @@ const Mettings = async ({
                 </div>
                 <Search />
                 {/* Aquí agregamos la tabla de contratos */}
-                <TableDataReuniones query={query} />
+                <TableDataClientes query={query} />
             </div>
         </div>
     );
 };
 
-export default Mettings;
+export default Customers;

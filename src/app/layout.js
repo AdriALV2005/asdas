@@ -12,41 +12,106 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-      <header class="bg-gray-800">
-  <nav class="container mx-auto px-6 py-3">
-    <div class="flex items-center justify-between">
-      <div class="text-white font-bold text-xl">
-        <a href="#">Logo</a>
-      </div>
-      <div class="hidden md:block">
-        <ul class="flex items-center space-x-8">
-          <li><a href="/employee" class="text-white">Home</a></li>
-          <li><a href="/employee" class="text-white">Empleados</a></li>
-          <li><a href="/contratos" class="text-white">Contratos</a></li>
-          <li><a href="/reunion" class="text-white">Reunion</a></li>
-        </ul>
-      </div>
-      <div class="md:hidden">
-        <button class="outline-none mobile-menu-button">
-          <svg class="w-6 h-6 text-white" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-            <path d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div class="mobile-menu hidden md:hidden">
-      <ul class="mt-4 space-y-4">
-        <li><a href="#" class="block px-4 py-2 text-white bg-gray-900 rounded">Home</a></li>
-        <li><a href="/empleyee" class="block px-4 py-2 text-white bg-gray-900 rounded">empleados</a></li>
-        <li><a href="/contratos" class="block px-4 py-2 text-white bg-gray-900 rounded">contratos</a></li>
-        <li><a href="/reuniones" class="block px-4 py-2 text-white bg-gray-900 rounded">reuniones</a></li>
-      </ul>
-    </div>
-    
-  </nav>
-</header>
-{children}
-        </body>
+        <header class="bg-gray-800">
+          <nav class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+              <div class="text-white font-bold text-xl">
+                <a href="#">Logo</a>
+              </div>
+              <div class="hidden md:block">
+                <ul class="flex items-center space-x-8">
+                  <li>
+                    <a href="/employee" class="text-white">
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/employee" class="text-white">
+                      Empleados
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/contratos" class="text-white">
+                      Contratos
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/reuniones" class="text-white">
+                      Reuniones
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/clientes" class="text-white">
+                      Clientes
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="md:hidden">
+                <button class="outline-none mobile-menu-button">
+                  <svg
+                    class="w-6 h-6 text-white"
+                    x-show="!showMenu"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="mobile-menu hidden md:hidden">
+              <ul class="mt-4 space-y-4">
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-white bg-gray-900 rounded"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/empleyee"
+                    class="block px-4 py-2 text-white bg-gray-900 rounded"
+                  >
+                    empleados
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/contratos"
+                    class="block px-4 py-2 text-white bg-gray-900 rounded"
+                  >
+                    contratos
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/reuniones"
+                    class="block px-4 py-2 text-white bg-gray-900 rounded"
+                  >
+                    reuniones
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/clientes"
+                    class="block px-4 py-2 text-white bg-gray-900 rounded"
+                  >
+                    clientes
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
