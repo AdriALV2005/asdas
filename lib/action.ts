@@ -38,6 +38,9 @@ export const saveEmployee = async (prevSate: any, formData: FormData) => {
     return { message: "Failed to create new employee" };
   }
   
+
+
+
   revalidatePath("/employee");
   redirect("/employee");
 };
@@ -52,6 +55,7 @@ export const getEmployeelist = async (query: string) => {
         email: true,
         phone: true,
         createdAt: true,
+        updatedAt: true
       },
       orderBy: {
         createdAt: "desc",
@@ -63,6 +67,9 @@ export const getEmployeelist = async (query: string) => {
   }
 };
  
+//editar
+
+
 // sirve para obtener un empleado por id
 export const getData = async (query: string) => {
   try {

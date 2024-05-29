@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { getMettingList } from "../lib/actionReunion";
 import { formatDate } from "../lib/utilsContratos";
-import { DeleteButton } from "./delete";
+import { DeleteButton , DeleteButtonReunion } from "./delete";
 
 const TableDataReuniones= async ({
     query
@@ -32,12 +32,13 @@ const TableDataReuniones= async ({
                         <td className="py-3 px-6">{metting.lugar}</td>
                         <td className="py-3 px-6">{formatDate(metting.createdAt.toString())}</td>
                         
-                        {/* <td className="flex justify-center gap-1 py-3">
-                            <Link href={`/reunion/edit/${map_reu.reunion_id}`} className="btn btn-info">
+                         <td className="flex justify-center gap-1 py-3">
+                            <Link href={`/reunion/edit/${metting.reunion_id}`} className="btn btn-info">
                                 Editar
                             </Link>
+                            {/* <DeleteButtonReunion reunion_id={metting.reunion_id} /> */}
                             
-                        </td> */}
+                        </td> 
                     </tr>
                 ))}
             </tbody>

@@ -22,7 +22,7 @@ const Home = async ({
             <Link
               href="/employee/create"
               className="btn btn-primary">
-              Create
+              crear
             </Link>
           </div>
           <Search />
