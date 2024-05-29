@@ -1,29 +1,17 @@
-
 generator client {
   provider = "prisma-client-js"
 }
-
+ 
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
-
-model Contrato {
-  id String @id @default(cuid())
-  nombreContratista String
-  emailContratista String
-  detallesContrato String
-  fechaInicio DateTime
-  fechaFin DateTime
-  monto Decimal
-  estadoContrato EstadoContrato
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-}
-
-enum EstadoContrato {
-  PENDIENTE
-  ACTIVO
-  COMPLETADO
-  CANCELADO
+ 
+model Employee {
+id String @id @default(cuid())
+name String
+email String
+phone String
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
 }
