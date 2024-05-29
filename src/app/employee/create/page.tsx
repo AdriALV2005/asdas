@@ -5,7 +5,9 @@ import { useFormState } from "react-dom";
 import { saveEmployee } from "../../../../lib/action";
   
 const CreateEmployeePage = () => {
-    const [state, formAction] = useFormState(saveEmployee, null);
+
+  // sirve para manejar el estado del formulario
+    const [state, formAction] = useFormState(saveEmployee, null); // saveEmployee es la función que se ejecuta al enviar el formulario
     return (
     <div className="max-w-md mx-auto mt-5">
         <h1 className="text-2xl text-center mb-2">Add New Employee</h1>

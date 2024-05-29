@@ -6,12 +6,14 @@ import { prisma } from "./prisma";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
  
+// sirve para validar los campos del empleado
 const EmployeeSchema = z.object({
   name: z.string().min(6),
   email: z.string().min(6),
   phone: z.string().min(11),
 });
  
+// sirve para guardar un nuevo empleado
 export const saveEmployee = async (prevSate: any, formData: FormData) => {
   const validatedFields = EmployeeSchema.safeParse(
     Object.fromEntries(formData.entries())
@@ -22,7 +24,7 @@ export const saveEmployee = async (prevSate: any, formData: FormData) => {
       Error: validatedFields.error.flatten().fieldErrors,
     };
   }
-  
+  //sirve para guardar un nuevo empleado
   try {
     await prisma.employee.create({
       data: {
@@ -40,6 +42,7 @@ export const saveEmployee = async (prevSate: any, formData: FormData) => {
   redirect("/employee");
 };
  
+// sirve para obtener la lista de empleados
 export const getEmployeelist = async (query: string) => {
   try {
     const employees = await prisma.employee.findMany({
@@ -60,6 +63,7 @@ export const getEmployeelist = async (query: string) => {
   }
 };
  
+// sirve para obtener un empleado por id
 export const getData = async (query: string) => {
   try {
     const employees = await prisma.employee.findMany({
@@ -78,6 +82,8 @@ export const getData = async (query: string) => {
   }
 };
  
+
+// sirve para obtener un empleado por id
 export const getEmployeeById = async (id: string) => {
   try {
     const employee = await prisma.employee.findUnique({
@@ -89,6 +95,7 @@ export const getEmployeeById = async (id: string) => {
   }
 };
  
+// sirve para actualizar un empleado
 export const updateEmployee = async (
   id: string,
   prevSate: any,
@@ -121,6 +128,8 @@ export const updateEmployee = async (
   redirect("/employee");
 };
  
+
+// sirve para eliminar un empleado
 export const deleteEmployee = async (id: string) => {
   try {
     await prisma.employee.delete({

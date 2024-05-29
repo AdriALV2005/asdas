@@ -28,10 +28,10 @@ const TableDataContratos = async ({
                     <tr key={contract.codigo_id} className="bg-white border-b">
                         <td className="py-3 px-6">{index + 1}</td>
                         <td className="py-3 px-6">{contract.estado}</td>
-                        <td className="py-3 px-6">{formatDate(contract.fechaInicio)}</td>
-                        <td className="py-3 px-6">{formatDate(contract.fechaFin)}</td>
-                        <td className="py-3 px-6">{formatDate(contract.createdAt)}</td>
-                        <td className="py-3 px-6">{formatDate(contract.updatedAt)}</td>
+                        <td className="py-3 px-6">{contract.fechaInicio.toString()}</td>
+                        <td className="py-3 px-6">{contract.fechaFin.toString()}</td>
+                        <td className="py-3 px-6">{formatDate(contract.createdAt.toString())}</td>
+                        
                         <td className="flex justify-center gap-1 py-3">
                             <Link href={`/contract/edit/${contract.codigo_id}`} className="btn btn-info">
                                 Editar

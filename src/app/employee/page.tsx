@@ -13,12 +13,12 @@ const Home = async ({
     }) => {
     const query = searchParams?.query || "";
     return (
-    <div >
-      <div >
-        <h1 >Lupe</h1>
+      <div className="w-screen py-20 flex justify-center flex-col items-center">
+      <div className="flex items-center justify-between gap-1 mb-5">
+        <h1 >Empleados</h1>
       </div>    
-        <div >
-          <div >
+      <div className="overflow-x-auto">
+          <div className="mb-2 w-full text-right">
             <Link
               href="/employee/create"
               className="btn btn-primary">
@@ -26,7 +26,8 @@ const Home = async ({
             </Link>
           </div>
           <Search />
-          <Suspense key={query} fallback={<Spinner />}>
+          
+          <Suspense key={query} fallback={<Spinner />}> 
             <TableData query={query}/>
           </Suspense>
       </div>  

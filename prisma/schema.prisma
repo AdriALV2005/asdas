@@ -20,8 +20,8 @@ updatedAt DateTime @updatedAt
 model Contratos {
   codigo_id Int @id @default(autoincrement())
   estado String
-  fechaInicio DateTime
-  fechaFin DateTime
+  fechaInicio String
+  fechaFin String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

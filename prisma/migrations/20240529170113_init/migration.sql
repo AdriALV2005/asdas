@@ -14,8 +14,8 @@ CREATE TABLE `Employee` (
 CREATE TABLE `Contratos` (
     `codigo_id` INTEGER NOT NULL AUTO_INCREMENT,
     `estado` VARCHAR(191) NOT NULL,
-    `fechaInicio` DATETIME(3) NOT NULL,
-    `fechaFin` DATETIME(3) NOT NULL,
+    `fechaInicio` VARCHAR(191) NOT NULL,
+    `fechaFin` VARCHAR(191) NOT NULL,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME(3) NOT NULL,
 

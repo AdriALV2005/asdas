@@ -4,13 +4,14 @@ import { getData } from "../lib/action";
 import { formatDate } from "../lib/utils";
 import { DeleteButton } from "./delete";
  
+
+// sirve para mostrar la tabla de empleados
 const Employee = async ({
     query
     }: {
     query: string;
     }) => {
     const employees = await getData(query);
-    //const employees = await getEmployeelist(query);
     return (
         <table className="table table-zebra">
         <thead className="text-sm text-gray-700 uppercase bg-gray-50">

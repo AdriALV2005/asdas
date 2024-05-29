@@ -1,4 +1,6 @@
 //lib\utils.ts
+
+//sirve para formatear la fecha
 export const formatDate = (dateStr: string) => {
     const date = new Date(dateStr);
     const formatter = new Intl.DateTimeFormat("id-ID", {
